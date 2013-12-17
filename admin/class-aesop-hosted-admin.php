@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name.
+ * Aesop Hosted
  *
  * @package   Aesop_Hosted_Admin
  * @author    Nick Haskins <email@nickhaskins.com>

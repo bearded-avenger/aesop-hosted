@@ -24,7 +24,7 @@ class aiHostedDash {
 	    remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal');
 	  	remove_meta_box( 'dashboard_quick_press',   'dashboard', 'side' );      //Quick Press widget
 	    remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );      //Recent Drafts
-	    remove_meta_box( 'dashboard_primary',       'dashboard', 'side' );      //WordPress.com Blog
+	   	remove_meta_box( 'dashboard_primary',       'dashboard', 'side' );      //WordPress.com Blog
 	    remove_meta_box( 'dashboard_secondary',     'dashboard', 'side' );      //Other WordPress News
 	    remove_meta_box( 'dashboard_incoming_links','dashboard', 'normal' );    //Incoming Links
 	    remove_meta_box( 'dashboard_plugins',       'dashboard', 'normal' );    //Plugins
@@ -41,9 +41,10 @@ class aiHostedDash {
 	function custom_widgets() {
 		global $wp_meta_boxes;
 
-		wp_add_dashboard_widget('get_storiews', 'Your Stories', array($this,'get_stories'));
+		wp_add_dashboard_widget('get_stories', 'Your Stories', array($this,'get_stories'));
 		wp_add_dashboard_widget('collab_posts', 'Collaborated Stories', array($this,'collaborated_stories'));
 	}
+
 
 	/**
 	 	* Return the stories that the currnent user is co-authored
