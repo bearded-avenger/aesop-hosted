@@ -18,7 +18,7 @@ class aiHostedMenuCleanup {
 	  	// remove pages for all but super admin
 	  	if(!is_super_admin()){
 
-	  		remove_menu_page( 'edit.php' );                  //Users
+
 	  		remove_menu_page('upload.php');
 	  		remove_menu_page( 'options-general.php' );        //Settings
 	  		remove_menu_page( 'edit-comments.php' );          //Comments
@@ -33,6 +33,7 @@ class aiHostedMenuCleanup {
 	*	Removed edit tags from post menu
 	*/
 	function remove_theme_edit(){
+		remove_submenu_page( 'edit.php', 'edit.php'  );
 		remove_submenu_page( 'themes.php', 'theme-editor.php' );
 		remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag'  );
 	}

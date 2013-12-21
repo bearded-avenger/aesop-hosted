@@ -66,7 +66,9 @@ class Aesop_Hosted_Admin {
 		require_once( AI_HOSTED_DIR.'admin/includes/dashboard.php' );
 		require_once( AI_HOSTED_DIR.'admin/includes/menuclean.php' );
 		require_once( AI_HOSTED_DIR.'admin/includes/postclean.php' );
+		require_once( AI_HOSTED_DIR.'admin/includes/storytab.php' );
 
+		add_action('admin_enqueue_scripts', array($this,'admin_scripts'));
 	}
 
 	/**
@@ -95,4 +97,23 @@ class Aesop_Hosted_Admin {
 		return self::$instance;
 	}
 
+	/**
+	 	* Load styles for story view
+	 	*
+	 	* @since     1.0.0
+	*/
+	public function admin_scripts(){
+
+
+        //Register Styles
+		wp_register_style( 'ai-hosted-styles', AI_HOSTED_URL. '/admin/assets/css/style.css', AI_HOSTED_VERSION, true);
+
+		// Load styles and scripts on areas that users will edit
+		if ( is_admin() ) {
+
+			// Enqueue styles
+			wp_enqueue_style( 'ai-hosted-styles' );
+
+		}
+	}
 }
