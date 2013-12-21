@@ -107,12 +107,14 @@ class Aesop_Hosted_Admin {
 
         //Register Styles
 		wp_register_style( 'ai-hosted-styles', AI_HOSTED_URL. '/admin/assets/css/style.css', AI_HOSTED_VERSION, true);
+		wp_register_script('ai-hosted-script', AI_HOSTED_URL.'/admin/assets/js/admin.js', AI_HOSTED_VERSION, true);
 
 		// Load styles and scripts on areas that users will edit
 		if ( is_admin() ) {
 
 			// Enqueue styles
 			wp_enqueue_style( 'ai-hosted-styles' );
+			wp_enqueue_script('ai-hosted-script');
 
 		}
 	}

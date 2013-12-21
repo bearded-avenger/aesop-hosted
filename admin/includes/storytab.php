@@ -8,11 +8,11 @@ class aiCoreStoryView {
 
 	function stories_tab(){
 
-		add_posts_page( __('Stories','aesop-core'), __('Stories','aesop-core'), 'edit_posts', 'aesop-stories', array($this,'my_custom_menu_page') );
+		add_posts_page( __('Stories','aesop-hosted'), __('Stories','aesop-hosted'), 'edit_posts', 'aesop-stories', array($this,'story_tab'),99 );
 
 	}
 
-	function my_custom_menu_page(){
+	function story_tab(){
 
 	  	echo $this->stories();
 	}
@@ -42,7 +42,7 @@ class aiCoreStoryView {
 		  			<a href="/wp-admin/post-new.php" class="aesop-clear">
 		  				<div class="aesop-admin-grid-create-inner">
 		      				<i class="dashicons dashicons-plus"></i>
-		      				<h3><?php _e('Create a Story','aesop-core');?></h3>
+		      				<h3><?php _e('Create a Story','aesop-hosted');?></h3>
 		      			</div>
 		      		 </a>
 
