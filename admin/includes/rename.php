@@ -40,6 +40,9 @@ class aiHostedStrings {
 
         $words = array(
             'Add New Category' => 'Add New Collection',
+            'Wordpress'		=> 'Aesop',
+            'Categories' => 'Collections',
+            'category'	=> 'collection',
             'Posts'	=> 'Stories',
             'Post' => 'Story',
             'Username'	=> 'Collaborator Name',
