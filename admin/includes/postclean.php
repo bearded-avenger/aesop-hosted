@@ -17,6 +17,11 @@ class aiCorePostScreenClean {
 	function replace_category_box()  {
 	    remove_meta_box( 'categorydiv', 'post', 'side' );
 	    add_meta_box('categorydiv', __('Collections'), 'post_categories_meta_box', 'post', 'side', 'low');
+
+	    // remove featured image post meta box and put it back, but below the publish button, and above our other post meta boxes
+		remove_meta_box( 'postimagediv', 'post', 'side' );
+		add_meta_box('postimagediv', __('Story Cover'), 'post_thumbnail_meta_box', 'post', 'side', 'default');
+
 	}
 
 	/**
