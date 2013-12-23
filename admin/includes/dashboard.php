@@ -7,7 +7,7 @@ class aiHostedDash {
 		add_action('wp_dashboard_setup', array($this,'remove_widgets' ));
 		add_action('wp_dashboard_setup', array($this,'custom_widgets'));
 	}
-
+	
 	/**
 	 	* Remove wordpress dashboard widgets
 	 	*
