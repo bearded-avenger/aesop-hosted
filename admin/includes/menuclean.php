@@ -20,7 +20,7 @@ class aiHostedMenuCleanup {
 
 
 	  		remove_menu_page('upload.php');
-	  		remove_menu_page( 'options-general.php' );        //Settings
+	  		//remove_menu_page( 'options-general.php' );        //Settings
 	  		remove_menu_page( 'edit-comments.php' );          //Comments
 	  		remove_menu_page( 'edit.php?post_type=page' );    //Pages
 
