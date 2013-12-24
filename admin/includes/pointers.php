@@ -70,6 +70,9 @@ class aiHostedPointers {
 	   	$engine_pointer_content = '<h3>' . __( 'Story Components' ) . '</h3>';
 	   	$engine_pointer_content .= '<p>' . __( 'Build your story with interactive storytelling components.' ) . '</p>';
 
+	   	$gallery_pointer_content = '<h3>' . __( 'Story Galleries' ) . '</h3>';
+	   	$gallery_pointer_content .= '<p>' . __( 'Create and manage galleries for your stories.' ) . '</p>';
+
 	   	return array(
 	      $prefix . 'new_items' => array(
 	         	'content' => $engine_pointer_content,
@@ -78,12 +81,19 @@ class aiHostedPointers {
 	         	'align' => 'left',
 	         	'active' => ( ! in_array( $prefix . 'new_items', $dismissed ) )
 	      	),
-	      	$prefix.'map_help' => array(
+	      	$prefix.'story_cover_help' => array(
 	      		'content' => $story_pointer_content,
 	         	'anchor_id' => '#postimagediv',
 	         	'edge' => 'top',
 	         	'align' => 'right',
-	         	'active' => ( ! in_array( $prefix . 'new_items', $dismissed ) )
+	         	'active' => ( ! in_array( $prefix . 'story_cover_help', $dismissed ) )
+	      	),
+	      	$prefix.'gallery_help' => array(
+	      		'content' => $gallery_pointer_content,
+	         	'anchor_id' => '#menu-posts-ai_galleries',
+	         	'edge' => 'left',
+	         	'align' => 'left',
+	         	'active' => ( ! in_array( $prefix . 'gallery_help', $dismissed ) )
 	      	)
 	   );
 	}

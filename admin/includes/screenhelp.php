@@ -31,6 +31,9 @@ class AesopContextualHelp {
 			case ($screen->id == 'edit-post' || $screen->id == 'post'):
 				$this->aesop_post_help($screen);
 			break;
+			case ($screen->id == 'dashboard'):
+				$this->aesop_dash_help($screen);
+			break;
 		endswitch;
 
 	}
@@ -87,5 +90,21 @@ class AesopContextualHelp {
       	$screen->set_help_sidebar(__('Sidebar doc.','aesop-core'));
 	}
 
+	function aesop_dash_help($screen){
+		// creating stories help
+		$screen->remove_help_tab('overview');
+		$screen->remove_help_tab('help-navigation');
+		$screen->remove_help_tab('help-layout');
+		$screen->remove_help_tab('help-content');
+
+		$screen->add_help_tab( array(
+      		'id'      => 'ai-dash-help',
+      		'title'   => __('Dash Help', 'aesop-core'),
+      		'content' => __('<p>Help Content here.</p>','aesop-core'),
+      	));
+
+      	// set help sidebar
+      	$screen->set_help_sidebar(__('Sidebar doc.','aesop-core'));
+	}
 }
 new AesopContextualHelp;
