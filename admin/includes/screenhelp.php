@@ -90,6 +90,13 @@ class AesopContextualHelp {
       	$screen->set_help_sidebar(__('Sidebar doc.','aesop-core'));
 	}
 
+	/**
+	 	* Adds contextual help to dashboard
+	 	* Removes existing dashboard help not relevant to story telling
+	 	*
+	 	* @since       1.0
+	 	* @return      void
+	*/
 	function aesop_dash_help($screen){
 		// creating stories help
 		$screen->remove_help_tab('overview');
@@ -99,7 +106,7 @@ class AesopContextualHelp {
 
 		$screen->add_help_tab( array(
       		'id'      => 'ai-dash-help',
-      		'title'   => __('Dash Help', 'aesop-core'),
+      		'title'   => __('Aesop Dashboard', 'aesop-core'),
       		'content' => __('<p>Help Content here.</p>','aesop-core'),
       	));
 
