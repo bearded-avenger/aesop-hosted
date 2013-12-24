@@ -68,6 +68,7 @@ class Aesop_Hosted_Admin {
 		require_once( AI_HOSTED_DIR.'admin/includes/postclean.php' );
 		require_once( AI_HOSTED_DIR.'admin/includes/storytab.php' );
 		require_once( AI_HOSTED_DIR.'admin/includes/adminbar.php' );
+		require_once( AI_HOSTED_DIR.'admin/includes/pointers.php' );
 
 		add_action('admin_enqueue_scripts', array($this,'admin_scripts'));
 	}
