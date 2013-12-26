@@ -22,7 +22,7 @@ function aesop_hosted_welcome_panel() {
 	<div class="welcome-panel-column-container">
 	<div class="welcome-panel-column">
 		<h4><?php _e( "Let's Get Started",'aesop-core' ); ?></h4>
-		<a class="button button-primary button-hero load-customize hide-if-no-customize" href="http://your-website.com"><?php _e( 'Create a Story','aesop-core' ); ?></a>
+		<a class="button button-primary button-hero load-customize hide-if-no-customize" href="<?php echo admin_url( 'post-new.php' );?>"><?php _e( 'Create a Story','aesop-core' ); ?></a>
 			<p class="hide-if-no-customize"><?php printf( __( 'or, <a href="%s">edit your site settings</a>','aesop-core' ), admin_url( 'options-general.php' ) ); ?></p>
 	</div>
 	<div class="welcome-panel-column">
