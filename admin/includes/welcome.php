@@ -17,8 +17,8 @@ function aesop_hosted_welcome_panel() {
 	</script>
 
 	<div class="custom-welcome-panel-content">
-	<h3><?php _e( 'Welcome to Aesop!','aesop-core' ); ?></h3>
-	<p class="about-description"><?php _e( 'Here you can place your custom text, give your customers instructions, place an ad or your contact information.','aesop-core' ); ?></p>
+	<h3><?php _e( 'Welcome to Aesop Beta!','aesop-core' ); ?></h3>
+	<p class="about-description"><?php _e( 'You must be pretty special because you are amongst the first to kick the tires on this thing! The Aesop Pro stuff doesnt work so dont try. Most of the post stuff works, as does collaborator stuff, so have fun! Please provide feedback using the feedback link up top.','aesop-core' ); ?></p>
 	<div class="welcome-panel-column-container">
 	<div class="welcome-panel-column">
 		<h4><?php _e( "Let's Get Started",'aesop-core' ); ?></h4>
@@ -44,9 +44,8 @@ function aesop_hosted_welcome_panel() {
 	<div class="welcome-panel-column welcome-panel-last">
 		<h4><?php _e( 'More Actions','aesop-core' ); ?></h4>
 		<ul>
-			<li><?php printf( '<div class="welcome-icon welcome-widgets-menus">' . __( 'Manage <a href="%1$s">widgets</a> or <a href="%2$s">menus</a>','aesop-core' ) . '</div>', admin_url( 'widgets.php' ), admin_url( 'nav-menus.php' ) ); ?></li>
-			<li><?php printf( '<a href="%s" class="welcome-icon welcome-comments">' . __( 'Turn comments on or off','aesop-core' ) . '</a>', admin_url( 'options-discussion.php','aesop-core' ) ); ?></li>
-			<li><?php printf( '<a href="%s" class="welcome-icon welcome-learn-more">' . __( 'Learn more about getting started','aesop-core' ) . '</a>', __( 'http://codex.wordpress.org/First_Steps_With_WordPress','aesop-core' ) ); ?></li>
+			<li><?php printf( '<a href="%s" class="welcome-icon welcome-learn-more">' . __( 'Join the Aesop community','aesop-core' ) . '</a>', __( '#','aesop-core' ) ); ?></li>
+			<li><?php printf( '<a href="%s" class="welcome-icon welcome-appearence"><i class="dashicons dashicons-appearence"></i>' . __( 'Customize your site','aesop-core' ) . '</a>', home_url( '/' ) ); ?></li>
 		</ul>
 	</div>
 	</div>
